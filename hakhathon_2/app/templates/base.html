@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Two Doors</title>
+    <style>
+
+      body {
+			background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg');
+			  background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			margin: 35px;
+            text-align: center;
+		}
+
+		hr {
+			margin: 20px 0;
+			border: none;
+			border-top: 2px solid #ccc;
+		}
+           /* Style the doors */
+        .door {
+          display: inline-block;
+          width: 250px;
+          height: 350px;
+          margin: 10px;
+          background-size: contain;
+          cursor: pointer;
+        }
+
+        /* Style door 1 */
+        #door1 {
+          background-image: url("https://cdn.pixabay.com/photo/2017/10/03/02/23/door-2811141_1280.png");
+        }
+
+        /* Style door 2 */
+        #door2 {
+          background-image: url("https://www.pngplay.com/wp-content/uploads/5/Door-Transparent-PNG.png");
+        }
+
+        /* Center the doors */
+        .door-wrapper {
+          text-align: center;
+          margin-top: 50px;
+        }
+
+
+     </style>
+  </head>
+  <body>
+    <h1>Choose your way!</h1>
+    <div class="door-wrapper">
+    <div class="door" id="door1"></div>
+    <div class="door" id="door2"></div>
+  </div>
+    <script>
+     // Add a click event listener to each door
+    document.getElementById("door1").addEventListener("click", function() {
+      window.location.href = "/room1";
+    });
+
+    document.getElementById("door2").addEventListener("click", function() {
+      window.location.href = "/room2";
+    });
+    </script>
+  </body>
+</html>
